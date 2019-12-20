@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Math </title>
+</head>
+<body>
+<script>
+    var x = 6;
+    var y = 14;
+    var z = 4;
+    
+    x += y - x++ * z;
+    /* x++ = 7, 
+       6 * 4 = 24,
+       14 - 24 = -10,
+       6 + (-10) = -4
+    */    
+    document.writeln(x);
+    
+    var x = 6;
+    var y = 14;
+    var z = 4;
+
+    z = --x - y * 5;
+    /* --x = 5,
+       14 * 5 = 70,
+       5 - 70 = -65
+    */    
+    document.writeln(z);
+
+    var x = 6;
+    var y = 14;
+    var z = 4;
+    
+    y/= x + 5 % z;
+    /* 5 % 4 = 1,
+       6 + 1 = 7,
+       14 / 7 = 2
+    */  
+    document.writeln(y);
+    
+    var x = 6;
+    var y = 14;
+    var z = 4;
+
+    var result = z - x++ + y * 5;
+    /* x++ = 7,
+       14 * 5 = 70,
+       4 - 6 = -2,
+       -3 + 70 = 68
+    */ 
+    document.writeln(result);
+    
+    var x = 6;
+    var y = 14;
+    var z = 4;
+
+    x = y - x++ * z;
+    /* x++ = 7,
+       6 * 4 = 24,
+       14 - 24 = -10
+    */
+    document.writeln(x);
+
+    var a = x,
+    b = y,
+    if1 = a + b < 4 ? "Нет" : "Да";
+
+    document.writeln(if1);
+</script>
+<br><br><br>
+<script>
+    login = prompt('Enter your login here', '');
+    var if2 = (login == 'student') ? "Hello student!" : (login == 'headmaster') ? "Good morning!" : (login == '') ? "No login" : "No login";
+
+    document.writeln(if2);    
+</script>
+<br><br><br>
+<script>
+    var lines = 7;
+    var str = " ";
+    var symbol = "*";
+    for (var i = 0; i <= lines; i++) {
+        str += symbol;
+        console.log(str);
+    }
+</script>
+<br><br><br>
+<script>
+    var A = 1;
+    var B = 21;
+        for (let i = A; i < B; i++) {
+            if (!(i % 2) == 0) {
+                document.writeln(i);
+            }
+        }
+</script>
+<br><br><br>
+<script>
+    var A = 1;
+    var B = 21;
+        let c = A;
+        while (c <= B) {
+            document.writeln(c);
+            c++;
+        }
+</script>
+<br><br><br>
+<script>
+    for (var a = 0; a <=4; a++) {
+        console.log(a + "********");
+    }
+</script>
+</body>
+</html>
