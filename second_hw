@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Styles </title>
+</head>
+<body>
+    <script>
+        var styles = []; // Создаем массив не указывая кол-во элементов
+        styles[0] = "Jazz"; // Добавляем элемент Джаз
+        styles[1] = "Blues"; // Добавляем элемент Блюз
+        styles.push("Rock-n-roll"); // Добавляем элемент в конец массива
+        styles[(styles.length - 1) / 2] = "Classic"; // Classic будет добавляться по-середине
+
+        document.write(styles.shift()); // Выводит удаленный первый элемент массива
+        document.write("<br>", "<br>"); // Ставим два пропуска между document.write()
+        styles.unshift("Rap", "Raggy"); // Добавляем в начало массива два новых элемента
+        document.write(styles);
+    </script>
+    <br><br><br>
+    <script>
+        function map(fn, array) { // Создаем ф-цию map
+            let m = []; // Создаем массив m
+                for(let i = 0; i<array.length; i++) {
+                    m.push(smth(array[i])); // Добавляем в конец массива m ф-цию smth 
+                }
+                return m;
+        }
+        function smth(a) { // Создаем ф-цию smth 
+            return a * 4;
+        }
+        document.write(map(smth, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,])); // Элемент а умножается на каждый элемент массива 
+    </script>
+    <br><br><br>
+    <script> 
+        var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; // Массив с числами
+        var new_numbers = numbers.map(item => { // Новый массив с элементами предыдущего массива умноженные на себя же
+            return item * item; // Возвращает элемент массива умноженный на себя же
+        });
+        document.write(numbers, "<br><br>"); // Выводит изначальный массив
+        document.write(new_numbers); // Выводит новый массив
+    </script>
+    <br><br><br>
+    <!-- <script>
+        var age = +prompt("Tell your age");
+        function check_age(age) {
+            if (age >= 18) {
+                return true;
+            } else {
+                return alw;
+            }
+        }                                                           // Тренировался создать фунцкию для примера
+        var allw = confirm("Parents have allowed?");
+        function alw(allow) {
+            if (allw == true && age >= 18) {
+                return document.write("Welcome!")
+            } else {
+                return document.write("Sorry, no entry!")
+            }
+        }
+        alw();
+    </script> -->
+    <script>
+                // Пример
+        // function checkAge(age) {
+        //     if (age > 18) {
+        //         return true;
+        //     } else {
+        //         return confirm("Родители разрешили?");
+        //     }
+        // }
+        function checkAge(age) {
+            return age > 18 ? true : confirm("Родители разрешили?");
+        }
+    </script>
+</body>
+</html>
